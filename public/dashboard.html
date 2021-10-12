@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <!-- style.css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <nav class="nav">
+      <a href="/" class="logo">Book Store </a>
+      <div class="nav-right">
+        <img src="" alt="" class="nav-pp">
+        <h3>User: <span class="current-user">Sandip<span></h3>
+        <a href="/api/v1/auth/logout" class="btn" id="btn-logout">logout</a>
+      </div>
+    </nav>
+    <div class="dashboard-container">
+       <form action="" id="add-book-form" class="book-form">
+        <h1 class="form-title dashboard-form-title">Add a new book</h1>
+       <div class="form-container">
+          <div class="form-group">
+          <label for="a-title" class="form-label">Title</label>
+          <input type="text" name="title" id="a-title" class="form-input" />
+        </div>
+        <div class="form-group">
+          <label for="a-author" class="form-label">author</label>
+          <input
+            type="text"
+            name="author"
+            id="a-author"
+            class="form-input"
+          />
+        </div>
+        <div class="form-group">
+          <label for="a-publisher" class="form-label">publisher</label>
+          <input
+            type="text"
+            name="publisher"
+            id="a-publisher"
+            class="form-input"
+          />
+        </div>
+         <div class="form-group">
+          <label for="a-ISBN" class="form-label">ISBN</label>
+          <input
+            type="text"
+            name="ISBN"
+            id="a-ISBN"
+            class="form-input"
+          />
+        </div>
+         <div class="form-group">
+          <label for="a-category" class="form-label">category</label>
+          <input
+            type="text"
+            name="category"
+            id="a-category"
+            class="form-input"
+          />
+        </div>
+       </div>
+        <button type="submit" class="btn btn-add-book">Add</button>
+      </form>
+      <div class="table-container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Author</th>
+              <th>Publisher</th>
+              <th>ISBN</th>
+              <th>Category</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+          </tbody>
+        </table>
+      </div>
+    </div>
+     <div class="toaster-message-container">
+    </div>
+    <script src="./dashboard.js"></script>
+  </body>
+</html>

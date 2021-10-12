@@ -1,0 +1,261 @@
+/* google fonts */
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@200;300;400;500;600;700;800;900&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --main-font: "Roboto Slab", serif;
+  --white: #ffffff;
+  --black: #000000;
+  --padding: 2rem;
+  --border-radius: 0.25rem;
+}
+
+body {
+  font-family: var(--main-font);
+  background-color: #90d5ec;
+  background-image: linear-gradient(315deg, #90d5ec 0%, #fc575e 74%);
+  min-height: 100vh;
+}
+
+section {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 1.2rem;
+}
+
+.form {
+  padding: var(--padding);
+  width: 650px;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: bold;
+}
+
+.form-input {
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 0.3rem 0.4rem;
+}
+
+.btn {
+  font-size: 1.1rem;
+  padding: 0.5rem 3rem;
+  font-weight: bold;
+  text-align: center;
+  background-color: #3741d1;
+  color: var(--white);
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  text-transform: capitalize;
+}
+
+#btn-register,
+#btn-login {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.btn:hover {
+  opacity: 0.7;
+}
+
+.message {
+  font-size: 1rem;
+  text-align: center;
+  text-transform: lowercase;
+  margin-top: 1rem;
+  font-weight: 400;
+  display: none;
+}
+
+.message::first-letter {
+  text-transform: uppercase;
+}
+
+.message.show {
+  display: block;
+}
+
+.message.fail {
+  color: red;
+}
+
+.message.success {
+  color: green;
+}
+
+.not-registered-container {
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.not-registered-container > a {
+  color: rgb(52, 52, 207);
+  font-weight: bold;
+}
+
+/* Dashboard */
+.nav {
+  background-color: var(--white);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.nav-right > h3 {
+  font-size: 1.5rem;
+}
+
+.nav-pp {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.current-user {
+  font-weight: bold;
+  text-transform: capitalize;
+}
+
+#btn-logout {
+  padding: 0.4rem 1rem;
+  margin-left: 1rem;
+}
+
+.dashboard-container {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+
+.table-container {
+  overflow: hidden;
+  background-color: var(--white);
+  padding: 2rem;
+  border-radius: var(--border-radius);
+  margin-top: 1rem;
+}
+
+.table {
+  width: 100%;
+  text-align: center;
+  border-collapse: collapse;
+  border: 1px solid var(--black);
+}
+
+th {
+  padding: 1rem 0;
+  background-color: var(--black);
+  color: var(--white);
+}
+
+td {
+  padding: 1rem 0;
+  font-weight: bold;
+}
+
+.btn-table-action {
+  background-color: var(--black);
+  color: var(--white);
+  padding: 0.2rem 0.3rem;
+  border-radius: var(--border-radius);
+}
+
+.btn-table-action:hover {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+/* book form */
+.book-form {
+  margin-top: 1rem;
+  padding: var(--padding);
+  width: 100%;
+  background-color: var(--white);
+  border-radius: var(--border-radius);
+}
+
+.form-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem 2.5rem;
+}
+
+/* toaster message */
+.toaster-message-container {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+
+  min-width: 20rem;
+  max-width: 35rem;
+  background-color: rgb(40, 180, 40);
+  color: var(--white);
+  padding: 1rem 2rem;
+  font-weight: 500;
+  text-align: center;
+  border-radius: var(--border-radius);
+  transition: transform linear 0.3s;
+}
+
+.toaster-message-container.show {
+  transform: translate(-50%, 1rem);
+}
+.toaster-message-container.success {
+  background-color: rgb(40, 180, 40);
+}
+
+.toaster-message-container.fail {
+  background-color: rgb(197, 31, 31);
+}

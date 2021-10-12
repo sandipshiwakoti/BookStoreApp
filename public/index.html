@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Book Store || Login Page</title>
+    <!-- custom css -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <section class="login">
+      <form action="" id="login-form" class="form">
+        <h1 class="form-title">Login to your account</h1>
+        <div class="form-group">
+          <label for="l-email" class="form-label">email</label>
+          <input type="email" name="email" id="l-email" class="form-input" />
+        </div>
+        <div class="form-group">
+          <label for="l-password" class="form-label">password</label>
+          <input
+            type="password"
+            name="password"
+            id="l-password"
+            class="form-input"
+          />
+        </div>
+        <button type="submit" class="btn btn-login">Login</button>
+        <div class="not-registered-container">
+          Not registerd yet? <a href="/register.html">Create an account</a>
+        </div>
+      </form>
+    </section>
+    <div class="toaster-message-container"></div>
+    <!-- custom js -->
+    <script src="./index.js"></script>
+  </body>
+</html>
